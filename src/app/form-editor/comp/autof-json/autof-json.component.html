@@ -1,0 +1,9 @@
+<h4>
+  Model Data
+</h4>
+
+<textarea col="189" row="12" name="dataText" [(ngModel)]="dataText"></textarea>
+<p *ngIf="errorMessage">{{errorMessage}}</p>
+<p>
+<button (click)="update()">Model data</button> {{data |json}}
+</p>

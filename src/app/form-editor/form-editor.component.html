@@ -1,0 +1,28 @@
+<label>
+  Name:
+
+</label>
+
+
+<runtime-content [formGroup]="profileForm" [template]="template"></runtime-content>
+<ngx-tabs>
+  <ngx-tab tabTitle="Modello">
+    <h4>modello </h4>
+      <autof-editor [data]="modelData" (onUpdate)='upDateModel($event)' parse="object"></autof-editor> 
+  </ngx-tab>
+  <ngx-tab tabTitle="form">
+    <li>link </li>
+  </ngx-tab>
+</ngx-tabs>
+
+<p>
+  <button (click)="updateName()">Update Name</button>
+</p>
+ Form Value: {{ profileForm.value | json }}
+ <br>
+ <p>model data ;</p>
+<!-- 
+Copyright 2017-2018 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
