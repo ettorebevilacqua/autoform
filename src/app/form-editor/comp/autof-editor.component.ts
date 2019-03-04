@@ -56,11 +56,13 @@ export class autofEditorComponent implements OnInit {
 
   update() {
     this.errorMessage = null;
-    let parse = this.dataText;
-    if (this.parse){
-     parse = this.parse === EnumParse.html ? this.tryParser(a=>a, '') : 
-        this.parse === EnumParse.object ? this.tryParser(JSON.parse, this.dataText) : this.dataText;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+    let out = this.dataText;
+    const s={
+      [EnumParse.html]:a=>a,
+      [EnumParse.object]:JSON.parse
     }
+    this.data = s[this.parse] ? this.tryParser(s[this.parse] , this.dataText) : null;
+    
     if (parse){
       this.data = parse; 
       this.onUpdate.emit(this.data); 

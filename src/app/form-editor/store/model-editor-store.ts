@@ -7,12 +7,17 @@ export class ModelEditorStore extends Store<DataModelState> {
   constructor () {
     super(new DataModelState());
   }
+  
 
   update(data: DataModel): void {
     this.setState({
       ...this.state,
       data: data
     });
+  }
+
+  parseJson(){
+
   }
 
   addCandidate (name: string): void {}
