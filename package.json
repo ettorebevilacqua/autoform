@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
+    "1-liners": "^0.4.0",
     "@angular/animations": "7.1.4",
     "@angular/common": "7.1.4",
     "@angular/compiler": "7.1.4",
